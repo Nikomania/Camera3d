@@ -7,7 +7,7 @@ SDL_Renderer* WindowManager::renderer = NULL;
 Uint64 WindowManager::last_time = 0;
 
 bool WindowManager::Setup() {
-    SDL_SetAppMetadata("Example Renderer Points", "1.0", "com.example.renderer-points");
+    SDL_SetAppMetadata("Camera 3D", "1.0", "com.camera3d.test");
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         SDL_Log("Couldn't initialize SDL: %s", SDL_GetError());
@@ -16,7 +16,7 @@ bool WindowManager::Setup() {
 
     if (
         !SDL_CreateWindowAndRenderer(
-            "examples/renderer/points",
+            "Camera 3D - Test",
             WindowConstants::WINDOW_WIDTH,
             WindowConstants::WINDOW_HEIGHT,
             SDL_WINDOW_RESIZABLE,

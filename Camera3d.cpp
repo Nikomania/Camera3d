@@ -5,19 +5,12 @@
 #include "WindowManager.h"
 
 #define NUM_POINTS 500
-#define MIN_PIXELS_PER_SECOND 30  /* move at least this many pixels per second. */
-#define MAX_PIXELS_PER_SECOND 60  /* move this many pixels per second at most. */
+#define MIN_PIXELS_PER_SECOND 30
+#define MAX_PIXELS_PER_SECOND 60
 
 
 WindowManager windowManager;
 
-/* (track everything as parallel arrays instead of a array of structs,
-   so we can pass the coordinates to the renderer in a single function call.) */
-
-   /* Points are plotted as a set of X and Y coordinates.
-      (0, 0) is the top left of the window, and larger numbers go down
-      and to the right. This isn't how geometry works, but this is pretty
-      standard in 2D graphics. */
 static SDL_FPoint points[NUM_POINTS];
 static float point_speeds[NUM_POINTS];
 
@@ -72,7 +65,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
     windowManager.UpdateLastTime();
 	windowManager.RenderPoints(points, NUM_POINTS);
 
-    return SDL_APP_CONTINUE;  /* carry on with the program! */
+    return SDL_APP_CONTINUE;
 }
 
 void SDL_AppQuit(void* appstate, SDL_AppResult result) {
