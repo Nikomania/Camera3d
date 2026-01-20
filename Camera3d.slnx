@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Camera3d.vcxproj" />
+  <Project Path="Camera3d.vcxproj" Id="7a6ec527-2ed2-4d1e-b9e5-e5d8cf1c53a1" />
 </Solution>
